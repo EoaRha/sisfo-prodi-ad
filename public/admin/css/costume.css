@@ -1,0 +1,50 @@
+*{
+	font-family: 'Roboto', sans-serif;
+}
+
+.checkout-form label{
+	font-size: 12px;
+	font-weight: 700;
+}
+
+.checkout-form input{
+	font-size: 14px;
+	padding: 5px;
+	font-weight: 400;
+}
+
+.order-details label{
+	font-size: 12px;
+	font-weight: 700;
+}
+
+.order-details div{
+	font-size: 14px;
+	padding: 5px !important;
+}
+
+.kate-image{
+	width: 100px;
+	height: 100px;
+}
+
+.form-selectkat{
+	display: block;
+	width: 100%;
+	padding: .375rem 2.25rem .375rem .75 rem;
+	font-size: 1rem;
+	font-weight: 400;
+	line-height: 1.5;
+	color: #212529;
+	background-color: #fff;
+	background-repeat: no-repeat;
+	background-position: right .74rem center;
+	background-size: 16px 12px;
+	border: 1px solid $ced4da;
+	border-radius: .25rem;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+
+

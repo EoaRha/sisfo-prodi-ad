@@ -1,0 +1,17 @@
+{
+    "name": "Store Nabawi Herbal",
+    "short_name": "NHI",
+    "start_url": "/",
+    "background_color": "#6777ef",
+    "description": "Progressive Web Application for Store Nabawi Herbal",
+    "display": "fullscreen",
+    "theme_color": "#6777ef",
+    "icons": [
+        {
+            "src": "logo.png",
+            "sizes": "174x50",
+            "type": "image/png",
+            "purpose": "any maskable"
+        }
+    ]
+}
