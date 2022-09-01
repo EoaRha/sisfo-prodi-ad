@@ -38,7 +38,7 @@ Route::get('kategori/{kate_slug}/{prod_slug}', [FrontendController::class, 'prod
 Route::get('product-list', [FrontendController::class, 'productlistAjax']);
 Route::post('searchproduct', [FrontendController::class, 'searchProduct']);
 
-Auth::routes();
+Auth::routes(['verify'=>true]);
 
 Route::get('load-cart-data', [CartController::class, 'cartcount']);
 Route::get('load-wishlist-count', [WishlistController::class, 'wishlistcount']);

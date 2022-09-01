@@ -11,12 +11,18 @@ use App\Models\Category;
 
 class FrontendController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware(['auth', 'verified']);
+    }
+
     public function index()
     {
         $featured_products = Product::where('trending', '1')->take(15)->get();
         $trending_kategori = Category::where('popular', '1')->take(15)->get();
         $sprod = Product::paginate(20);
-        return view('frontend.index', compact('featured_products', 'trending_kategori', 'sprod'));
+        return view('frontend2.index', compact('featured_products', 'trending_kategori', 'sprod'));
     }
 
     public function kategori()
