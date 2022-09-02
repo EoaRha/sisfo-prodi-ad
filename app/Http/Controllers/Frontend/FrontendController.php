@@ -25,10 +25,10 @@ class FrontendController extends Controller
         return view('frontend2.index', compact('featured_products', 'trending_kategori', 'sprod'));
     }
 
-    public function kategori()
+    public function kkl()
     {
         $kategori = Category::where('status', '1')->get();
-        return view('frontend.kategori', compact('kategori'));
+        return view('frontend2.kkl.index', compact('kategori'));
     }
 
     public function shop(Request $request)

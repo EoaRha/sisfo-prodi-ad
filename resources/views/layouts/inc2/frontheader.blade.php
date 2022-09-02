@@ -35,7 +35,7 @@
                                             <a href="my-account.html">Skripsi</a>
                                         </li>
                                         <li class="menu-item">
-                                            <a href="shop.html">Kuliah Kerja Lapangan</a>
+                                            <a href="{{ url('kkl') }}">Kuliah Kerja Lapangan</a>
                                         </li>
                                     </ul>
                                 </li>

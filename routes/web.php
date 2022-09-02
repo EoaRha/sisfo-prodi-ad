@@ -29,7 +29,7 @@ use App\Models\Bukti;
 
 
 Route::get('/', [FrontendController::class, 'index']);
-Route::get('kategori', [FrontendController::class, 'kategori']);
+Route::get('kkl', [FrontendController::class, 'kkl']);
 Route::get('shop', [FrontendController::class, 'shop']);
 Route::get('kategori/{slug}', [FrontendController::class, 'viewkategori']);
 Route::get('kategori/{kate_slug}/{prod_slug}', [FrontendController::class, 'produkview']);
