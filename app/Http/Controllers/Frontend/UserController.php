@@ -11,7 +11,7 @@ class UserController extends Controller
 {
     public function index(Request $request)
     {
-        $orders = Order::where('payment_status', '0')->get();
+        $orders = Order::where('user_id', Auth::id())->get();
         if ($request->has('searchord')) {
             $orders = Order::where('tracking_no', 'LIKE', '%'.$request->searchord.'%')->paginate(15);
         }else{

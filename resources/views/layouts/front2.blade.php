@@ -24,6 +24,9 @@
     <!-- Bootstrap CSS-->
     <link href="{{ asset('frontend2/vendor/bootstrap-4.1/bootstrap.min.css') }}" rel="stylesheet" media="all">
 
+
+    <link href="{{ asset('assets2/plugins/datatable/css/dataTables.bootstrap5.min.css') }}" rel="stylesheet" />
+
     <!-- Vendor CSS-->
     <link href="{{ asset('frontend2/vendor/animate.css/animate.min.css') }}" rel="stylesheet" media="all">
     <link href="{{ asset('frontend2/vendor/css-hamburgers/hamburgers.min.css') }}" rel="stylesheet" media="all">
@@ -82,6 +85,15 @@
     <script src="{{ asset('frontend2/vendor/jquery/jquery.min.js') }}"></script>
     <!-- Bootstrap JS-->
     <script src="{{ asset('frontend2/vendor/bootstrap-4.1/bootstrap.min.js') }}"></script>
+
+    <script src="{{ asset('assets2/plugins/datatable/js/jquery.dataTables.min.js') }}"></script>
+    <script src="{{ asset('assets2/plugins/datatable/js/dataTables.bootstrap5.min.js') }}"></script>
+    <script>
+        $(document).ready(function() {
+            $('#example').DataTable();
+          } );
+    </script>
+
     <!-- Vendor JS-->
     <script src="{{ asset('frontend2/vendor/animsition/animsition.min.js') }}"></script>
     <script src="{{ asset('frontend2/vendor/slick/slick.min.js') }}"></script>
@@ -93,6 +105,11 @@
     <script src="{{ asset('frontend2/vendor/matchHeight/jquery.matchHeight-min.js') }}"></script>
     <script src="{{ asset('frontend2/vendor/select2/select2.min.js') }}"></script>
     <script src="{{ asset('frontend2/vendor/sweetalert/sweetalert.min.js') }}"></script>
+    @if(session('status'))
+        <script>
+            swal("{{ session('status') }}");
+        </script>
+    @endif
     <script src="{{ asset('frontend2/vendor/noUiSlider/nouislider.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('frontend2/vendor/revolution/js/jquery.themepunch.tools.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('frontend2/vendor/revolution/js/jquery.themepunch.revolution.min.js') }}"></script>

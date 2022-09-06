@@ -1,4 +1,9 @@
 @extends('layouts.admin')
+
+@section('title')
+	Dashboard SI-ITB-AD
+@endsection
+
 @section('content')
 
 <div class="page-content">

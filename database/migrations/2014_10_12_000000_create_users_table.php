@@ -16,17 +16,12 @@ class CreateUsersTable extends Migration
         Schema::create('users', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('lname')->nullable();
+            $table->string('nama_mahasiswa')->nullable();
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
-            $table->string('phone')->nullable();
-            $table->string('alamat')->nullable();
-            $table->string('provinsi')->nullable();
-            $table->string('tipe')->nullable();
-            $table->string('kota')->nullable();
-            $table->string('kecamatan')->nullable();
-            $table->string('kode_pos')->nullable();
+            $table->string('nomor_mahasiswa')->nullable();
+            $table->string('kelas')->nullable();
             $table->tinyInteger('role_as')->default('0');
             $table->rememberToken();
             $table->timestamps();

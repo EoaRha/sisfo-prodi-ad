@@ -79,7 +79,7 @@
 		<!-- Tiga -->
 		<li class="menu-label">Pengajuan</li>
 		<li>
-			<a href="widgets.html">
+			<a href="{{ url('adm-kkl') }}">
 				<div class="parent-icon"><i class='lni lni-network'></i>
 				</div>
 				<div class="menu-title">Kuliah Kerja Lapangan</div>

@@ -16,132 +16,61 @@
     <nav class="header-nav-menu-mobile">
         <div class="container-fluid">
             <ul class="menu nav-menu menu-mobile">
-                <li class="menu-item menu-item-has-children">
-                    <a href="home-main.html">Home</a>
-                    <ul class="sub-menu">
-                        <li class="menu-item">
-                            <a href="home-main.html">Main home</a>
-                        </li>
-                        <li class="menu-item">
-                            <a href="home-project-hover.html">Project Hover</a>
-                        </li>
-                        <li class="menu-item">
-                            <a href="home-vertical-slide.html">Vertical Slider</a>
-                        </li>
-                        <li class="menu-item">
-                            <a href="home-vertical-slide-video-background.html">Vertical Slider (Video Background)</a>
-                        </li>
-                        <li class="menu-item">
-                            <a href="home-onepage.html">Onepage</a>
-                        </li>
-                        <li class="menu-item">
-                            <a href="home-onepage-video-background.html">Onepage (Video Background)</a>
-                        </li>
-                        <li class="menu-item">
-                            <a href="home-revo-slide.html">Revolution Slider</a>
-                        </li>
-                        <li class="menu-item">
-                            <a href="home-revo-slide-video-background.html">Revolution Slider (Video Background)</a>
-                        </li>
-                        <li class="menu-item">
-                            <a href="home-project-showcase.html">Project Showcase</a>
-                        </li>
-                        <li class="menu-item">
-                            <a href="home-masonry-project.html">Masonry Project</a>
-                        </li>
-                        <li class="menu-item">
-                            <a href="home-creative-showcase.html">Creative Showcase</a>
-                        </li>
-                        <li class="menu-item">
-                            <a href="index.html">Landing</a>
-                        </li>
-                    </ul>
-                </li>
                 <li class="menu-item">
-                    <a href="about-us.html">about</a>
+                    <a href="{{ url('/') }}">Home</a>
                 </li>
                 <li class="menu-item menu-item-has-children">
-                    <a href="project-grid-full.html">Project</a>
+                    <a href="">Program Studi</a>
                     <ul class="sub-menu">
                         <li class="menu-item">
-                            <a href="project-grid-full.html">Project grid fullwidth</a>
+                            <a href="project-grid-full.html">Profile</a>
                         </li>
                         <li class="menu-item">
-                            <a href="project-grid-stand.html">Project Grid Standard</a>
+                            <a href="project-grid-stand.html">Kurikulum</a>
                         </li>
                         <li class="menu-item">
-                            <a href="project-masonry.html">Project masonry</a>
-                        </li>
-                        <li class="menu-item">
-                            <a href="project-carousel.html">Project carousel</a>
-                        </li>
-                        <li class="menu-item menu-item-has-children">
-                            <a href="project-detail-1.html">Project detail</a>
-                            <ul class="sub-menu">
-                                <li class="menu-item">
-                                    <a href="project-detail-1.html">Project detail v1</a>
-                                </li>
-                                <li class="menu-item">
-                                    <a href="project-detail-2.html">Project detail v2</a>
-                                </li>
-                                <li class="menu-item">
-                                    <a href="project-detail-3.html">Project detail v3</a>
-                                </li>
-                                <li class="menu-item">
-                                    <a href="project-detail-4.html">Project detail v4</a>
-                                </li>
-                            </ul>
+                            <a href="project-masonry.html">Struktural</a>
                         </li>
                     </ul>
                 </li>
                 <li class="menu-item menu-item-has-children">
-                    <a href="my-account.html">pages</a>
+                    <a href="">Pengajuan</a>
                     <ul class="sub-menu">
                         <li class="menu-item">
-                            <a href="my-account.html">my account</a>
+                            <a href="my-account.html">Skripsi</a>
                         </li>
                         <li class="menu-item">
-                            <a href="shop.html">shop</a>
-                        </li>
-                        <li class="menu-item">
-                            <a href="product-detail.html">product detail</a>
-                        </li>
-                        <li class="menu-item">
-                            <a href="cart.html">cart</a>
-                        </li>
-                        <li class="menu-item">
-                            <a href="checkout.html">checkout</a>
-                        </li>
-                        <li class="menu-item">
-                            <a href="coming-soon.html">coming soon</a>
+                            <a href="{{ url('kkl') }}">Kuliah Kerja Lapangan</a>
                         </li>
                     </ul>
                 </li>
                 <li class="menu-item menu-item-has-children">
-                    <a href="blog-grid.html">blog</a>
+                    <a href="">Informasi</a>
                     <ul class="sub-menu">
-                        <li class="menu-item">
-                            <a href="blog-grid.html">blog grid</a>
-                        </li>
-                        <li class="menu-item">
-                            <a href="blog-sidebar.html">blog with sidebar</a>
-                        </li>
                         <li class="menu-item menu-item-has-children">
-                            <a href="blog-detail-sidebar.html">blog detail with sidebar</a>
+                            <a href="">Pengumuman</a>
                             <ul class="sub-menu sub-menu--left">
                                 <li class="menu-item">
-                                    <a href="blog-detail-sidebar.html">blog detail with sidebar</a>
+                                    <a href="blog-detail-sidebar.html">Hasil Pengajuan Skripsi</a>
                                 </li>
                                 <li class="menu-item">
-                                    <a href="blog-detail-img.html">blog detail image</a>
-                                </li>
-                                <li class="menu-item">
-                                    <a href="blog-detail-gallery.html">blog detail gallery</a>
-                                </li>
-                                <li class="menu-item">
-                                    <a href="blog-detail-video.html">blog detail video</a>
+                                    <a href="{{ url('hasilkkl') }}">Hasil Pengajuan KKL</a>
                                 </li>
                             </ul>
+                        </li>
+                        <li class="menu-item">
+                            <a href="blog-grid.html">Berita</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="menu-item menu-item-has-children">
+                    <a href="">Akreditasi</a>
+                    <ul class="sub-menu">
+                        <li class="menu-item">
+                            <a href="my-account.html">Institusi</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="">Program Studi</a>
                         </li>
                     </ul>
                 </li>

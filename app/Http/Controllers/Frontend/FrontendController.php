@@ -5,9 +5,11 @@ namespace App\Http\Controllers\frontend;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Product;
+use App\Models\Kkl;
 use App\Models\User;
 use App\Models\Cart;
 use App\Models\Category;
+use Illuminate\Support\Facades\Auth;
 
 class FrontendController extends Controller
 {
@@ -25,10 +27,10 @@ class FrontendController extends Controller
         return view('frontend2.index', compact('featured_products', 'trending_kategori', 'sprod'));
     }
 
-    public function kkl()
+    public function view()
     {
-        $kategori = Category::where('status', '1')->get();
-        return view('frontend2.kkl.index', compact('kategori'));
+        $kkl = Kkl::where('status', '0')->get();
+        return view('frontend2.kkl.hasilkkl', compact('kkl'));
     }
 
     public function shop(Request $request)

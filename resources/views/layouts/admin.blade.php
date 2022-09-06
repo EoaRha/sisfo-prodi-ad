@@ -32,7 +32,7 @@
     <link rel="stylesheet" href="{{ asset('assets2/css/semi-dark.css') }}" />
     <link rel="stylesheet" href="{{ asset('assets2/css/header-colors.css') }}" />
 
-    <title>{{ config('app.name', 'SI-ITB-AD') }}</title>
+    <title>@yield('title')</title> 
 
 </head>
 <body>
@@ -172,6 +172,7 @@
     <script src="{{ asset('assets2/plugins/chartjs/js/Chart.min.js') }}"></script>
     <script src="{{ asset('assets2/plugins/chartjs/js/Chart.extension.js') }}"></script>
     <script src="{{ asset('assets2/plugins/sparkline-charts/jquery.sparkline.min.js') }}"></script>
+    
     <script src="{{ asset('assets2/plugins/datatable/js/jquery.dataTables.min.js') }}"></script>
     <script src="{{ asset('assets2/plugins/datatable/js/dataTables.bootstrap5.min.js') }}"></script>
 

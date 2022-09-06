@@ -12,10 +12,10 @@
                         <nav class="header-nav-menu">
                             <ul class="menu nav-menu">
                                 <li class="menu-item menu-item-has-children">
-                                    <a href="home-main.html">Home</a>
+                                    <a href="{{ url('/') }}">Home</a>
                                 </li>
                                 <li class="menu-item menu-item-has-children">
-                                    <a href="project-grid-full.html">Program Studi</a>
+                                    <a href="">Program Studi</a>
                                     <ul class="sub-menu">
                                         <li class="menu-item">
                                             <a href="project-grid-full.html">Profile</a>
@@ -29,10 +29,10 @@
                                     </ul>
                                 </li>
                                 <li class="menu-item menu-item-has-children">
-                                    <a href="my-account.html">Pengajuan</a>
+                                    <a href="">Pengajuan</a>
                                     <ul class="sub-menu">
                                         <li class="menu-item">
-                                            <a href="my-account.html">Skripsi</a>
+                                            <a href="">Skripsi</a>
                                         </li>
                                         <li class="menu-item">
                                             <a href="{{ url('kkl') }}">Kuliah Kerja Lapangan</a>
@@ -40,10 +40,18 @@
                                     </ul>
                                 </li>
                                 <li class="menu-item menu-item-has-children">
-                                    <a href="my-account.html">Informasi</a>
+                                    <a href="">Informasi</a>
                                     <ul class="sub-menu">
-                                        <li class="menu-item">
-                                            <a href="my-account.html">Pengumuman</a>
+                                        <li class="menu-item menu-item-has-children">
+                                            <a href="">Pengumuman</a>
+                                            <ul class="sub-menu">
+                                                <li class="menu-item">
+                                                    <a href="">Hasil Pengajuan Skripsi</a>
+                                                </li>
+                                                <li class="menu-item">
+                                                    <a href="{{ url('hasilkkl') }}">Hasil Pengajuan KKL</a>
+                                                </li>
+                                            </ul>
                                         </li>
                                         <li class="menu-item">
                                             <a href="shop.html">Berita</a>
@@ -51,7 +59,7 @@
                                     </ul>
                                 </li>
                                 <li class="menu-item menu-item-has-children">
-                                    <a href="blog-grid.html">Akreditasi</a>
+                                    <a href="">Akreditasi</a>
                                     <ul class="sub-menu">
                                         <li class="menu-item">
                                             <a href="blog-grid.html">Institusi</a>

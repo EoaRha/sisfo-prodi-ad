@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Admin2\StaffController;
+use App\Http\Controllers\Frontend\KklController;
+use App\Http\Controllers\Admin\PengajuanController;
 // old
 use App\Http\Controllers\Admin\KategoriController;
 use App\Http\Controllers\Admin\OrderController;
@@ -15,7 +16,7 @@ use App\Http\Controllers\Frontend\WishlistController;
 use App\Http\Controllers\Frontend\PembayaranController;
 use App\Http\Controllers\Frontend\BuktiController;
 // 
-use App\Models\Staff;
+use App\Models\Kkl;
 // 
 use App\Models\Order;
 use App\Models\Product;
@@ -29,7 +30,8 @@ use App\Models\Bukti;
 
 
 Route::get('/', [FrontendController::class, 'index']);
-Route::get('kkl', [FrontendController::class, 'kkl']);
+Route::get('/hasilkkl', [FrontendController::class, 'view']);
+
 Route::get('shop', [FrontendController::class, 'shop']);
 Route::get('kategori/{slug}', [FrontendController::class, 'viewkategori']);
 Route::get('kategori/{kate_slug}/{prod_slug}', [FrontendController::class, 'produkview']);
@@ -51,6 +53,10 @@ Route::post('add-to-wishlist', [WishlistController::class, 'add']);
 Route::post('delete-wishlist-item', [WishlistController::class, 'deleteitem']);
 
 Route::middleware(['auth'])->group(function(){
+
+    Route::get('kkl', [KklController::class, 'kkl']);
+    Route::post('pengajuan-kkl', [KklController::class, 'submitkkl']);
+
     Route::get('cart', [CartController::class, 'viewcart']);
 
     Route::get('checkout', [CheckoutController::class, 'index']);
@@ -78,8 +84,8 @@ Route::middleware(['auth'])->group(function(){
 
 Route::middleware(['auth', 'isAdmin'])->group(function (){
     Route::get('/dashboard', 'Admin\FrontendController@index');
+    Route::get('adm-kkl', [PengajuanController::class, 'index_kkl']);
 
-    Route::get('staff', [StaffController::class, 'index']);
     // old
     Route::get('Kategori', 'Admin\KategoriController@index');
     Route::get('add-kategori', 'Admin\KategoriController@add');
