@@ -31,6 +31,7 @@ use App\Models\Bukti;
 
 Route::get('/', [FrontendController::class, 'index']);
 Route::get('/hasilkkl', [FrontendController::class, 'view']);
+Route::get('/history-kkl', [FrontendController::class, 'history']);
 
 Route::get('shop', [FrontendController::class, 'shop']);
 Route::get('kategori/{slug}', [FrontendController::class, 'viewkategori']);
@@ -85,6 +86,9 @@ Route::middleware(['auth'])->group(function(){
 Route::middleware(['auth', 'isAdmin'])->group(function (){
     Route::get('/dashboard', 'Admin\FrontendController@index');
     Route::get('adm-kkl', [PengajuanController::class, 'index_kkl']);
+    Route::get('edit-kkl/{id}', [PengajuanController::class, 'edit']);
+    Route::put('update-kkl/{id}', [PengajuanController::class, 'update']);
+    Route::get('delete-kkl/{id}', [PengajuanController::class, 'destroy']);
 
     // old
     Route::get('Kategori', 'Admin\KategoriController@index');

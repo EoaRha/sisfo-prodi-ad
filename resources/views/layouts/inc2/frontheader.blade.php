@@ -4,7 +4,7 @@
             <div class="container-fluid">
                 <div class="header__content">
                     <div class="logo">
-                        <a href="#">
+                        <a href="{{ url('/') }}">
                             <img src="frontend2/images/icon/logo-black.png" alt="Tatee" />
                         </a>
                     </div>

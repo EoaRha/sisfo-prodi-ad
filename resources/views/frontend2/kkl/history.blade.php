@@ -8,52 +8,54 @@
 @endsection
 
 @section('title')
-    Pengumuman Hasil Pengajuan Judul KKL
+    History Pengajual Judul KKL
 @endsection
 
 @section('content2')
-
 <section class="section m-t-50 m-b-50">
     <div class="container">
         <header class="entry-header">
-            <h2 class="entry-title" style="font-size: 50px;">Daftar Yang Diterima Pengajuan KKL</h2>
+            <h2 class="entry-title" style="font-size: 50px;">History Pengajuan KKL Saya</h2>
         </header>
         <div class="entry-content m-t-20">
             <table id="example" class="display responsive table table-striped" style="width:100%">
                 <thead>
                     <tr>
-                        <th>Nama Mahasiswa</th>
-                        <th>NIM</th>
-                        <th>Kelas</th>
                         <th>Judul</th>
                         <th>Status</th>
+                        <th>Catatan</th>
+                        <th>Penguji</th>
+                        <th>Pembimbing</th>
                     </tr>
                 </thead>
                 <tbody>
                     @foreach($kkl as $item)
                     <tr>
-                        <td><i class="fa fa-caret-down"></i> <span style="font-weight: 600;">{{ $item->nama_mahasiswa }}</span></td>
-                        <td><span style="font-weight: 600;">{{ $item->nomor_mahasiswa }}</span></td>
-                        <td><span style="font-weight: 600;">{{ $item->kelas }}</span></td>
                         <td><span style="color: rgb(100,100,100); font-weight: 600; font-size: 15px; font-style: italic;">"{{ $item->judul }}"</span></td>
-                        @if($item->status == '1')
-                        <td><span style="color: green; font-weight: 600; font-size: 15px;">"Diterima"</span></td>
-                        @endif
+                        @if($item->status == '0')
+						<td><span style="text-align: center; font-size: 13px; color: #fcba03; font-weight: 600;">"Pending"</span></td>
+						@elseif($item->status == '1')
+						<td><span style="text-align: center; font-size: 13px; color: #06c706;font-weight: 600;">"Diterima"</span></td>
+						@elseif($item->status == '2')
+						<td><span style="text-align: center; font-size: 13px; color: #c70c06; font-weight: 600;">"Ditolak"</span></td>
+						@endif
+                        <td>{{ $item->catatan }}</td>
+                        <td>{{ $item->penguji }}</td>
+                        <td>{{ $item->pembimbing }}</td>
                     </tr>
                     @endforeach
                 </tbody>
                 <tfoot>
                     <tr>
-                        <th>Nama Mahasiswa</th>
-                        <th>NIM</th>
-                        <th>Kelas</th>
                         <th>Judul</th>
                         <th>Status</th>
+                        <th>Catatan</th>
+                        <th>Penguji</th>
+                        <th>Pembimbing</th>
                     </tr>
                 </tfoot>
             </table>
         </div>
     </div>
 </section>
-
 @endsection

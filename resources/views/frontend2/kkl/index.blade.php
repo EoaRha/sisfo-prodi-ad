@@ -15,6 +15,7 @@
 
 <section class="section checkout">
     <div class="container">
+            <a class="au-btn au-btn--solid au-btn-lg" href="{{ url('history-kkl') }}">History</a>
         <header class="entry-header">
             <h2 class="entry-title">Pengajuan Judul KKL</h2>
         </header>
