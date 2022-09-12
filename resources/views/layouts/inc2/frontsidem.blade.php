@@ -37,7 +37,7 @@
                     <a href="">Pengajuan</a>
                     <ul class="sub-menu">
                         <li class="menu-item">
-                            <a href="my-account.html">Skripsi</a>
+                            <a href="{{ url('skripsi') }}">Skripsi</a>
                         </li>
                         <li class="menu-item">
                             <a href="{{ url('kkl') }}">Kuliah Kerja Lapangan</a>
@@ -51,7 +51,7 @@
                             <a href="">Pengumuman</a>
                             <ul class="sub-menu sub-menu--left">
                                 <li class="menu-item">
-                                    <a href="blog-detail-sidebar.html">Hasil Pengajuan Skripsi</a>
+                                    <a href="{{ url('hasilskripsi') }}">Hasil Pengajuan Skripsi</a>
                                 </li>
                                 <li class="menu-item">
                                     <a href="{{ url('hasilkkl') }}">Hasil Pengajuan KKL</a>

@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateKategoriTable extends Migration
+class CreateSkripsisTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,17 +13,18 @@ class CreateKategoriTable extends Migration
      */
     public function up()
     {
-        Schema::create('kategori', function (Blueprint $table) {
+        Schema::create('skripsis', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('slug');
+            $table->string('user_id');
+            $table->string('nama_mahasiswa');
+            $table->string('nomor_mahasiswa');
+            $table->string('kelas');
+            $table->mediumText('judul');
             $table->longText('deskripsi');
             $table->tinyInteger('status')->default('0');
-            $table->tinyInteger('popular')->default('0');
-            $table->string('image');
-            $table->string('meta_title');
-            $table->string('meta_deskripsi');
-            $table->string('meta_keywords');
+            $table->string('pembimbing')->nullable();
+            $table->string('penguji')->nullable();
+            $table->longText('catatan')->nullable();
             $table->timestamps();
         });
     }
@@ -35,6 +36,6 @@ class CreateKategoriTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('kategori');
+        Schema::dropIfExists('skripsis');
     }
 }

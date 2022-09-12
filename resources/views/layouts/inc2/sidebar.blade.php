@@ -87,7 +87,7 @@
 		</li>
 
 		<li>
-			<a href="widgets.html">
+			<a href="{{ url('adm-skripsi') }}">
 				<div class="parent-icon"><i class='lni lni-certificate'></i>
 				</div>
 				<div class="menu-title">Skripsi</div>
