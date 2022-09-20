@@ -176,6 +176,14 @@
     <script src="{{ asset('assets2/plugins/datatable/js/jquery.dataTables.min.js') }}"></script>
     <script src="{{ asset('assets2/plugins/datatable/js/dataTables.bootstrap5.min.js') }}"></script>
 
+    <script src="{{ asset('assets2/js/tinymce/tinymce.min.js') }}" referrerpolicy="origin"></script>
+    <script>
+        tinymce.init({
+            selector:'#deskripsi',
+            menubar: false
+        });
+    </script>
+
     <!--notification js -->
     <script src="{{ asset('assets2/plugins/notifications/js/lobibox.min.js') }}"></script>
     <script src="{{ asset('assets2/plugins/notifications/js/notifications.min.js') }}"></script>

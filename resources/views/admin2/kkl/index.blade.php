@@ -35,7 +35,7 @@
 							<th>Kelas</th>
 							<th>Judul</th>
 							<th>Status</th>
-							<th>Delete</th>
+							<th>Action</th>
 						</tr>
 					</thead>
 					<tbody>

@@ -59,7 +59,7 @@
                             </ul>
                         </li>
                         <li class="menu-item">
-                            <a href="blog-grid.html">Berita</a>
+                            <a href="{{ url('berita') }}">Berita</a>
                         </li>
                     </ul>
                 </li>

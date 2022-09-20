@@ -54,7 +54,7 @@
                                             </ul>
                                         </li>
                                         <li class="menu-item">
-                                            <a href="shop.html">Berita</a>
+                                            <a href="{{ url('berita') }}">Berita</a>
                                         </li>
                                     </ul>
                                 </li>
